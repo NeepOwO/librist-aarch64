@@ -1,0 +1,11 @@
+prefix=/home/neep/librist/build
+srcdir=/home/neep/librist
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: librist
+Description: Reliable Internet Stream Transport (RIST)
+Version: 0.2.10
+Libs: -L${prefix} -lrist
+Libs.private: -pthread
+Cflags: -I${prefix} -I${srcdir} -I${prefix} -I${srcdir} -I${prefix}/src -I${srcdir}/src -I${prefix}/include/librist -I${srcdir}/include/librist -I${prefix}/include -I${srcdir}/include -I${prefix}/contrib -I${srcdir}/contrib -I${prefix}/contrib/mbedtls/library -I${srcdir}/contrib/mbedtls/library -I${prefix}/contrib/mbedtls/include -I${srcdir}/contrib/mbedtls/include -I${prefix}/contrib/contrib_cJSON -I${srcdir}/contrib/contrib_cJSON

@@ -1,0 +1,562 @@
+Build started at 2024-10-12T14:23:51.610663
+Main binary: /usr/bin/python3
+Build Options: '--cross-file ../aarch64_cross.txt'
+Python system: Linux
+The Meson build system
+Version: 0.61.2
+Source dir: /home/neep/librist
+Build dir: /home/neep/librist/build
+Build type: cross build
+Project name: libRIST
+Project version: 0.2.10
+Sanity testing C compiler: aarch64-linux-gnu-gcc
+Is cross compiler: True.
+Sanity check compiler command line: aarch64-linux-gnu-gcc sanitycheckc.c -o sanitycheckc_cross.exe -march=armv8-a -D_FILE_OFFSET_BITS=64 -c
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+C compiler for the host machine: aarch64-linux-gnu-gcc (gcc 11.4.0 "aarch64-linux-gnu-gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0")
+C linker for the host machine: aarch64-linux-gnu-gcc ld.bfd 2.38
+Sanity testing C compiler: cc
+Is cross compiler: False.
+Sanity check compiler command line: cc sanitycheckc.c -o sanitycheckc.exe -D_FILE_OFFSET_BITS=64
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command: /home/neep/librist/build/meson-private/sanitycheckc.exe
+C compiler for the build machine: cc (gcc 11.4.0 "cc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0")
+C linker for the build machine: cc ld.bfd 2.38
+Build machine cpu family: x86_64
+Build machine cpu: x86_64
+Host machine cpu family: aarch64
+Host machine cpu: aarch64
+Target machine cpu family: aarch64
+Target machine cpu: aarch64
+Running compile:
+Working directory:  /home/neep/librist/build/meson-private/tmpyzbctj5_
+Command line:  aarch64-linux-gnu-gcc /home/neep/librist/build/meson-private/tmpyzbctj5_/testfile.c -E -P -march=armv8-a -D_FILE_OFFSET_BITS=64 -P -O0 -std=c99 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("pthread.h")
+          #error "Header 'pthread.h' could not be found"
+         #endif
+        #else
+         #include <pthread.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Has header "pthread.h" : YES 
+Running compile:
+Working directory:  /home/neep/librist/build/meson-private/tmpealqw4oz
+Command line:  aarch64-linux-gnu-gcc /home/neep/librist/build/meson-private/tmpealqw4oz/testfile.c -o /home/neep/librist/build/meson-private/tmpealqw4oz/output.obj -c -march=armv8-a -D_FILE_OFFSET_BITS=64 -O0 -std=c99 
+
+Code:
+ 
+        #include <linux/if_alg.h>
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Check usable header "linux/if_alg.h" : YES 
+Running compile:
+Working directory:  /home/neep/librist/build/meson-private/tmph7wb0o4v
+Command line:  aarch64-linux-gnu-gcc /home/neep/librist/build/meson-private/tmph7wb0o4v/testfile.c -o /home/neep/librist/build/meson-private/tmph7wb0o4v/output.obj -c -march=armv8-a -D_FILE_OFFSET_BITS=64 -O0 -std=c99 
+
+Code:
+ 
+#include <ifaddrs.h>
+
+void test(void) {
+	struct ifaddrs *ifaddr = NULL;
+	getifaddrs(&ifaddr);
+}
+
+Compiler stdout:
+ 
+Compiler stderr:
+ /home/neep/librist/build/meson-private/tmph7wb0o4v/testfile.c: In function 'test':
+/home/neep/librist/build/meson-private/tmph7wb0o4v/testfile.c:5:34: error: 'NULL' undeclared (first use in this function)
+    5 |         struct ifaddrs *ifaddr = NULL;
+      |                                  ^~~~
+/home/neep/librist/build/meson-private/tmph7wb0o4v/testfile.c:3:1: note: 'NULL' is defined in header '<stddef.h>'; did you forget to '#include <stddef.h>'?
+    2 | #include <ifaddrs.h>
+  +++ |+#include <stddef.h>
+    3 | 
+/home/neep/librist/build/meson-private/tmph7wb0o4v/testfile.c:5:34: note: each undeclared identifier is reported only once for each function it appears in
+    5 |         struct ifaddrs *ifaddr = NULL;
+      |                                  ^~~~
+
+Running compile:
+Working directory:  /home/neep/librist/build/meson-private/tmpgwyd3nha
+Command line:  aarch64-linux-gnu-gcc /home/neep/librist/build/meson-private/tmpgwyd3nha/testfile.c -o /home/neep/librist/build/meson-private/tmpgwyd3nha/output.exe -march=armv8-a -D_FILE_OFFSET_BITS=64 -O0 -std=c99 -D_GNU_SOURCE 
+
+Code:
+ #include <time.h>
+#include <limits.h>
+
+        #if defined __stub_clock_gettime || defined __stub___clock_gettime
+        fail fail fail this function is not going to work
+        #endif
+        
+int main(void) {
+            void *a = (void*) &clock_gettime;
+            long long b = (long long) a;
+            return (int) b;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for function "clock_gettime" : YES 
+Running compile:
+Working directory:  /home/neep/librist/build/meson-private/tmpdkktzk_4
+Command line:  aarch64-linux-gnu-gcc /home/neep/librist/build/meson-private/tmpdkktzk_4/testfile.c -o /home/neep/librist/build/meson-private/tmpdkktzk_4/output.obj -c -march=armv8-a -D_FILE_OFFSET_BITS=64 -O0 -Wundef 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wundef: YES 
+Running compile:
+Working directory:  /home/neep/librist/build/meson-private/tmp_6hcjh86
+Command line:  aarch64-linux-gnu-gcc /home/neep/librist/build/meson-private/tmp_6hcjh86/testfile.c -o /home/neep/librist/build/meson-private/tmp_6hcjh86/output.obj -c -march=armv8-a -D_FILE_OFFSET_BITS=64 -O0 -Werror=vla 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Werror=vla: YES 
+Running compile:
+Working directory:  /home/neep/librist/build/meson-private/tmp2k4873i6
+Command line:  aarch64-linux-gnu-gcc /home/neep/librist/build/meson-private/tmp2k4873i6/testfile.c -o /home/neep/librist/build/meson-private/tmp2k4873i6/output.obj -c -march=armv8-a -D_FILE_OFFSET_BITS=64 -O0 -Wmaybe-uninitialized -Wno-maybe-uninitialized 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-maybe-uninitialized: YES 
+Running compile:
+Working directory:  /home/neep/librist/build/meson-private/tmpmy57dyj3
+Command line:  aarch64-linux-gnu-gcc /home/neep/librist/build/meson-private/tmpmy57dyj3/testfile.c -o /home/neep/librist/build/meson-private/tmpmy57dyj3/output.obj -c -march=armv8-a -D_FILE_OFFSET_BITS=64 -O0 -Wmissing-field-initializers -Wno-missing-field-initializers 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-missing-field-initializers: YES 
+Running compile:
+Working directory:  /home/neep/librist/build/meson-private/tmpqewcn3hc
+Command line:  aarch64-linux-gnu-gcc /home/neep/librist/build/meson-private/tmpqewcn3hc/testfile.c -o /home/neep/librist/build/meson-private/tmpqewcn3hc/output.obj -c -march=armv8-a -D_FILE_OFFSET_BITS=64 -O0 -Wunused-parameter -Wno-unused-parameter 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-unused-parameter: YES 
+Running compile:
+Working directory:  /home/neep/librist/build/meson-private/tmpjfu71w3y
+Command line:  aarch64-linux-gnu-gcc /home/neep/librist/build/meson-private/tmpjfu71w3y/testfile.c -o /home/neep/librist/build/meson-private/tmpjfu71w3y/output.obj -c -march=armv8-a -D_FILE_OFFSET_BITS=64 -O0 -Wshorten-64-to-32 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ aarch64-linux-gnu-gcc: error: unrecognized command-line option '-Wshorten-64-to-32'
+
+Compiler for C supports arguments -Wshorten-64-to-32: NO 
+Running compile:
+Working directory:  /home/neep/librist/build/meson-private/tmpimw6z0pw
+Command line:  aarch64-linux-gnu-gcc /home/neep/librist/build/meson-private/tmpimw6z0pw/testfile.c -o /home/neep/librist/build/meson-private/tmpimw6z0pw/output.obj -c -march=armv8-a -D_FILE_OFFSET_BITS=64 -O0 -Wunused-parameter 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wunused-parameter: YES 
+Running compile:
+Working directory:  /home/neep/librist/build/meson-private/tmp7tsb92ty
+Command line:  aarch64-linux-gnu-gcc /home/neep/librist/build/meson-private/tmp7tsb92ty/testfile.c -o /home/neep/librist/build/meson-private/tmp7tsb92ty/output.obj -c -march=armv8-a -D_FILE_OFFSET_BITS=64 -O0 -Wmaybe-uninitialized 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wmaybe-uninitialized: YES 
+Running compile:
+Working directory:  /home/neep/librist/build/meson-private/tmpu7b1xdf8
+Command line:  aarch64-linux-gnu-gcc /home/neep/librist/build/meson-private/tmpu7b1xdf8/testfile.c -o /home/neep/librist/build/meson-private/tmpu7b1xdf8/output.obj -c -march=armv8-a -D_FILE_OFFSET_BITS=64 -O0 -Werror=deprecated-declarations -Wno-error=deprecated-declarations 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-error=deprecated-declarations: YES 
+Run-time dependency threads found: YES
+Running compile:
+Working directory:  /home/neep/librist/build/meson-private/tmpxuas0dfn
+Command line:  aarch64-linux-gnu-gcc /home/neep/librist/build/meson-private/tmpxuas0dfn/testfile.c -o /home/neep/librist/build/meson-private/tmpxuas0dfn/output.obj -c -march=armv8-a -D_FILE_OFFSET_BITS=64 -O0 -Watomic-implicit-seq-cst 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ aarch64-linux-gnu-gcc: error: unrecognized command-line option '-Watomic-implicit-seq-cst'
+
+Compiler for C supports arguments -Watomic-implicit-seq-cst: NO 
+Running compile:
+Working directory:  /home/neep/librist/build/meson-private/tmpavv183sg
+Command line:  aarch64-linux-gnu-gcc /home/neep/librist/build/meson-private/tmpavv183sg/testfile.c -E -P -march=armv8-a -D_FILE_OFFSET_BITS=64 -P -O0 -std=c99 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("sys/un.h")
+          #error "Header 'sys/un.h' could not be found"
+         #endif
+        #else
+         #include <sys/un.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Has header "sys/un.h" : YES 
+Pkg-config binary for 1 is not cached.
+Pkg-config binary for 1 specified from cross file, native file, or env var as ['pkg-config']
+Found pkg-config: /usr/bin/pkg-config (0.29.2)
+Determining dependency 'libmicrohttpd' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --modversion libmicrohttpd` -> 1
+
+CMake binary for 1 is not cached
+CMake binary missing from cross or native file, or env var undefined.
+Default target is not allowed for cross use
+Found CMake: NO
+CMake binary for machine 1 not found. Giving up.
+Run-time dependency libmicrohttpd found: NO (tried pkgconfig and cmake)
+Running compile:
+Working directory:  /home/neep/librist/build/meson-private/tmp7j2xjx9w
+Command line:  aarch64-linux-gnu-gcc /home/neep/librist/build/meson-private/tmp7j2xjx9w/testfile.c -o /home/neep/librist/build/meson-private/tmp7j2xjx9w/output.obj -c -march=armv8-a -D_FILE_OFFSET_BITS=64 -O0 -fvisibility=hidden 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -fvisibility=hidden: YES 
+Running compile:
+Working directory:  /home/neep/librist/build/meson-private/tmphiblxrmn
+Command line:  aarch64-linux-gnu-gcc /home/neep/librist/build/meson-private/tmphiblxrmn/testfile.c -o /home/neep/librist/build/meson-private/tmphiblxrmn/output.obj -c -march=armv8-a -D_FILE_OFFSET_BITS=64 -O0 -std=c99 
+
+Code:
+ 
+        #include <stdatomic.h>
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Check usable header "stdatomic.h" : YES 
+Pkg-config binary for 1 is cached.
+Determining dependency 'libcjson' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --modversion libcjson` -> 1
+
+CMake binary for 1 is cached as not found
+CMake binary for machine 1 not found. Giving up.
+Run-time dependency libcjson found: NO (tried pkgconfig and cmake)
+Running compile:
+Working directory:  /home/neep/librist/build/meson-private/tmp2l9zhmf_
+Command line:  aarch64-linux-gnu-gcc /home/neep/librist/build/meson-private/tmp2l9zhmf_/testfile.c -E -P -march=armv8-a -D_FILE_OFFSET_BITS=64 -P -O0 -std=c99 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("cjson/cJSON.h")
+          #error "Header 'cjson/cJSON.h' could not be found"
+         #endif
+        #else
+         #include <cjson/cJSON.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ /home/neep/librist/build/meson-private/tmp2l9zhmf_/testfile.c:4:12: error: #error "Header 'cjson/cJSON.h' could not be found"
+    4 |           #error "Header 'cjson/cJSON.h' could not be found"
+      |            ^~~~~
+
+Has header "cjson/cJSON.h" : NO 
+Message: Using builtin cJSON library
+Message: Building mbedtls
+Pkg-config binary for 1 is cached.
+Determining dependency 'mbedcrypto' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --modversion mbedcrypto` -> 1
+
+CMake binary for 1 is cached as not found
+CMake binary for machine 1 not found. Giving up.
+Run-time dependency mbedcrypto found: NO (tried pkgconfig and cmake)
+Running compile:
+Working directory:  /home/neep/librist/build/meson-private/tmpxtam232r
+Command line:  aarch64-linux-gnu-gcc /home/neep/librist/build/meson-private/tmpxtam232r/testfile.c -E -P -march=armv8-a -D_FILE_OFFSET_BITS=64 -P -O0 -std=c99 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("mbedtls/aes.h")
+          #error "Header 'mbedtls/aes.h' could not be found"
+         #endif
+        #else
+         #include <mbedtls/aes.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ /home/neep/librist/build/meson-private/tmpxtam232r/testfile.c:4:12: error: #error "Header 'mbedtls/aes.h' could not be found"
+    4 |           #error "Header 'mbedtls/aes.h' could not be found"
+      |            ^~~~~
+
+Has header "mbedtls/aes.h" : NO 
+Message: Using builtin mbedtls code
+Configuring version.h using configuration
+Configuring librist_config.h using configuration
+Program objcopy found: YES (/usr/bin/objcopy)
+Configuring config.h using configuration
+Message: Building tools
+Running compile:
+Working directory:  /home/neep/librist/build/meson-private/tmpaw59v737
+Command line:  aarch64-linux-gnu-gcc /home/neep/librist/build/meson-private/tmpaw59v737/testfile.c -o /home/neep/librist/build/meson-private/tmpaw59v737/output.exe -march=armv8-a -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lcmocka -Wl,--end-group -Wl,--allow-shlib-undefined 
+
+Code:
+ int main(void) { return 0; }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ /usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/bin/ld: cannot find -lcmocka: No such file or directory
+collect2: error: ld returned 1 exit status
+
+Running compile:
+Working directory:  /home/neep/librist/build/meson-private/tmp3vy1uy00
+Command line:  aarch64-linux-gnu-gcc /home/neep/librist/build/meson-private/tmp3vy1uy00/testfile.c -o /home/neep/librist/build/meson-private/tmp3vy1uy00/output.obj -c -march=armv8-a -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) {
+            void * something;
+            return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/neep/librist/build/meson-private/tmpyrouguz7
+Command line:  aarch64-linux-gnu-gcc /home/neep/librist/build/meson-private/tmpyrouguz7/testfile.c -o /home/neep/librist/build/meson-private/tmpyrouguz7/output.obj -c -march=armv8-a -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(void *) >= 0)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/neep/librist/build/meson-private/tmpy4gu93or
+Command line:  aarch64-linux-gnu-gcc /home/neep/librist/build/meson-private/tmpy4gu93or/testfile.c -o /home/neep/librist/build/meson-private/tmpy4gu93or/output.obj -c -march=armv8-a -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(void *) > 0)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/neep/librist/build/meson-private/tmp73siot7r
+Command line:  aarch64-linux-gnu-gcc /home/neep/librist/build/meson-private/tmp73siot7r/testfile.c -o /home/neep/librist/build/meson-private/tmp73siot7r/output.obj -c -march=armv8-a -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(void *) > 1)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/neep/librist/build/meson-private/tmpknzvied0
+Command line:  aarch64-linux-gnu-gcc /home/neep/librist/build/meson-private/tmpknzvied0/testfile.c -o /home/neep/librist/build/meson-private/tmpknzvied0/output.obj -c -march=armv8-a -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(void *) > 3)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/neep/librist/build/meson-private/tmp3sr2xklk
+Command line:  aarch64-linux-gnu-gcc /home/neep/librist/build/meson-private/tmp3sr2xklk/testfile.c -o /home/neep/librist/build/meson-private/tmp3sr2xklk/output.obj -c -march=armv8-a -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(void *) > 7)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/neep/librist/build/meson-private/tmp3k_4ayvz
+Command line:  aarch64-linux-gnu-gcc /home/neep/librist/build/meson-private/tmp3k_4ayvz/testfile.c -o /home/neep/librist/build/meson-private/tmp3k_4ayvz/output.obj -c -march=armv8-a -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(void *) > 15)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ /home/neep/librist/build/meson-private/tmp3k_4ayvz/testfile.c: In function 'main':
+/home/neep/librist/build/meson-private/tmp3k_4ayvz/testfile.c:3:37: error: size of array 'a' is negative
+    3 |         int main(void) { static int a[1-2*!(sizeof(void *) > 15)]; a[0]=0; return 0; }
+      |                                     ^
+
+Running compile:
+Working directory:  /home/neep/librist/build/meson-private/tmpeia8fwct
+Command line:  aarch64-linux-gnu-gcc /home/neep/librist/build/meson-private/tmpeia8fwct/testfile.c -o /home/neep/librist/build/meson-private/tmpeia8fwct/output.obj -c -march=armv8-a -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(void *) <= 11)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/neep/librist/build/meson-private/tmp87x35p9j
+Command line:  aarch64-linux-gnu-gcc /home/neep/librist/build/meson-private/tmp87x35p9j/testfile.c -o /home/neep/librist/build/meson-private/tmp87x35p9j/output.obj -c -march=armv8-a -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(void *) <= 9)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/neep/librist/build/meson-private/tmpsn4be7oo
+Command line:  aarch64-linux-gnu-gcc /home/neep/librist/build/meson-private/tmpsn4be7oo/testfile.c -o /home/neep/librist/build/meson-private/tmpsn4be7oo/output.obj -c -march=armv8-a -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(void *) <= 8)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/neep/librist/build/meson-private/tmpmdf2dpqc
+Command line:  aarch64-linux-gnu-gcc /home/neep/librist/build/meson-private/tmpmdf2dpqc/testfile.c -o /home/neep/librist/build/meson-private/tmpmdf2dpqc/output.obj -c -march=armv8-a -D_FILE_OFFSET_BITS=64 -O0 --print-search-dirs 
+
+Code:
+ 
+Compiler stdout:
+ install: /usr/lib/gcc-cross/aarch64-linux-gnu/11/
+programs: =/usr/lib/gcc-cross/aarch64-linux-gnu/11/:/usr/lib/gcc-cross/aarch64-linux-gnu/11/:/usr/lib/gcc-cross/aarch64-linux-gnu/:/usr/lib/gcc-cross/aarch64-linux-gnu/11/:/usr/lib/gcc-cross/aarch64-linux-gnu/:/usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/bin/aarch64-linux-gnu/11/:/usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/bin/aarch64-linux-gnu/:/usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/bin/
+libraries: =/usr/lib/gcc-cross/aarch64-linux-gnu/11/:/usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/lib/aarch64-linux-gnu/11/:/usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/lib/aarch64-linux-gnu/:/usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/lib/../lib/:/lib/aarch64-linux-gnu/11/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/11/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc-cross/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/lib/:/lib/:/usr/lib/
+
+Compiler stderr:
+ 
+Library cmocka found: NO
+Adding test "Simple profile unicast"
+Adding test "Simple profile unicast packet loss 10%"
+Adding test "Simple profile unicast packet loss 25%"
+Adding test "Simple profile multicast"
+Adding test "Simple profile multicast packet loss 10%"
+Adding test "Simple profile multicast packet loss 25%"
+Adding test "Main profile receive server mode, sender client mode"
+Adding test "Main profile receive server mode, sender client mode packet loss 10%"
+Adding test "Main profile receive server mode, sender client mode packet loss 25%"
+Adding test "Main profile receive client mode, sender server mode"
+Adding test "Main profile receive client mode, sender server mode packet loss 10%"
+Adding test "Main profile receive client mode, sender server mode packet loss 25%"
+Adding test "Main profile encryption receive server mode, sender client mode"
+Adding test "Main profile encryption receive client mode, sender server mode "
+Adding test "Main profile encryption receive client mode, sender server mode AES256 "
+Adding test "Main profile encryption receive server mode unencrypted, sender client mode"
+Adding test "Main profile encryption receive server mode, sender client mode unencrypted"
+Adding test "Main profile encryption client mode unencrypted, sender server mode"
+Adding test "Main profile encryption client mode, sender server mode unencrypted"
+Adding test "Main profile encryption receive client mode, sender server mode, SRP auth"
+Adding test "Main profile encryption receive client mode, sender server mode, SRP auth, client no SRP"
+Adding test "Main profile encryption receive client mode, sender server mode, SRP auth, server no SRP"
+Adding test "Main profile encryption receive client mode, sender server mode, SRP auth, password mismatch"
+Build targets in project: 8
+NOTICE: Future-deprecated features used:
+ * 0.56.0: {'meson.source_root'}
+
+libRIST 0.2.10
+
+  User defined options
+    Cross files: ../aarch64_cross.txt
+
+Found ninja-1.10.1 at /usr/bin/ninja
